@@ -1,17 +1,28 @@
+/*PSEUDOCODE
+Game states wind - player robot has defeated all enemy-robots
+    * FIGHT ALL ENEMY-ROBOTS
+    *DEFEAT Each enemy-robot
+lose - player robot's healt is zero or less
+
+*/
+
 var playerName = window.prompt("What is the name of your robot?");
 var playerHealth = 100;
 var playerAttack = 10;
+var playerMoney = 10;
 
 // you can also log multiple values at once like this
-console.log(playerName, playerHealth, playerAttack);
-
-var enemyName = "Roborto";
+// console.log(playerName, playerHealth, playerAttack);
+const enemyName = 'Roborto1'
+var enemyNames = ["Roborto", 'Amy Android', 'Robo Trumble'];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
 var playerMoney = 10;
 
-var fight = function() {
+
+
+var fight = function(enemyNames) {
     window.alert("Welcome to Robot Gladiators!");
   //Subtract the value of `playerAttack` from the value of `enemyHealth` and use that result to update the value in the `enemyHealth` variable
   
@@ -75,6 +86,25 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     fight();
   }
 };
+};
 
-fight();
-fight();
+// console.log(enemyNames.length)
+
+// for(var i = 0; i < 3; i++) {
+//     console.log("apple", + i);
+// }
+
+// for(var i = 0; i < enemyNames.length; i++) {
+//     console.log(enemyNames[i]);
+// }
+
+// for(var i = 0; i < enemyNames.length; i++) {
+//     console.log(enemyNames[i]);
+//     console.log(i);
+//     console.log(enemyNames[i] + " is at " + i + ' index');
+// }
+
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+
+}
